@@ -1,0 +1,65 @@
+:root {
+	font-size: 18px;
+}
+
+html {
+	margin-top: 0 !important;
+}
+
+body {
+	font-size: 1rem;
+	font-family: "Sora" , sans-serif;
+}
+
+main {
+	@apply my-[3rem]
+}
+
+.container {
+	@apply mx-auto sm:px-[2rem] px-[1rem];
+}
+
+p {
+	font-size: 1rem;
+	margin-bottom: 1rem;
+}
+
+h1,h2,h3,h4,h5,h6,
+.h1,.h2,.h3,.h4,.h5,.h6 {
+	font-family: "Sora" , sans-serif;
+}
+
+h1 {
+	@apply text-[1.5rem]
+}
+
+main {
+	ul {
+		li {
+			// list styiling
+		}
+	}
+}
+
+pre {
+	font-family: 'Roboto Mono', monospace;
+	font-size: 15px;
+}
+
+
+// admin bar 
+#wpadminbar {
+	@apply bg-[transparent] fixed h-[20px] top-0;
+	.quicklinks {
+		@apply bg-[#161d36] h-[32px] translate-y-[-100%];
+		transition: .5s;
+		// background: #1d2327;
+	}
+	&:hover {
+		.quicklinks {
+			@apply translate-y-[0];
+		}
+	}
+}
+
+

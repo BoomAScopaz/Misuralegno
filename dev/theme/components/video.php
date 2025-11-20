@@ -1,0 +1,1 @@
+<video class="<?= $args['class']; ?>" autoplay loop muted playsinline src="<?= $args['url']; ?>" type="video/mp4"></video>

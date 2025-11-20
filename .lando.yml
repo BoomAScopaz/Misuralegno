@@ -1,0 +1,20 @@
+name: starter
+recipe: wordpress
+proxy:
+  pma:
+    - pma.starter.lndo.site
+  # mailhog:
+    # - mailhog.starter.lndo.site
+config:
+  webroot: .
+  via: apache
+  php: "8.2"
+  xdebug: true
+services:
+  # mailhog:
+    # type: mailhog
+  pma:
+    type: phpmyadmin
+    host:
+      - database
+      
