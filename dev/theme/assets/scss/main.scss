@@ -1,14 +1,27 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+/* theme */
 
 @import 'theme/base';
 @import 'theme/fonts';
 @import 'theme/form';
-
-/* other file here */
-
-
+@import 'theme/header';
+@import 'theme/theme';
+@import 'theme/swiper';
+/*@import "../../../node_modules/swiper/swiper.css";*/
 
 /* components */
+
+@import 'components/hero_home';
+@import 'components/home_intro';
+@import 'components/double_images';
+@import 'components/services';
+@import 'components/contact_banner';
+@import 'components/text_block';
+@import 'components/about_block';
+@import 'components/processing_grid';
+@import 'components/gallery_grid';
+@import 'components/contact_block';
+@import 'components/slideshow_realizations';

@@ -1,8 +1,15 @@
-import Module from './_moduleblank'
+import Alpine from 'alpinejs'
+import boxresize from './_box-resize'
+import gridgal from './_gridgal'
+import Slider from './_slider'
 
+window.boxresize = boxresize
+window.gridgal = gridgal
+
+Alpine.start()
 
 // collect modules
-const init = [ Module ]
+const init = [ Slider ]
 
 // init modules
 document.addEventListener('DOMContentLoaded', () => {

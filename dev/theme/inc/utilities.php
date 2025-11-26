@@ -69,7 +69,6 @@ function createLayoutComponent($name) {
 
         // sanitizzazione del nome
         $name = preg_replace('/[^a-z0-9_-]/i', '', $name);
-
         $component = ABSPATH."dev/theme/components/{$name}.php";
         $css       = ABSPATH."dev/theme/assets/scss/components/_{$name}.scss";
         $cssMain   = ABSPATH."dev/theme/assets/scss/main.scss";
@@ -91,6 +90,14 @@ function createLayoutComponent($name) {
 }
 
 
+function createLayoutComponentInLoop($layout, $switch = false) {
+	if (!$switch) { return; }
+	$filePath = "components/{$layout['acf_fc_layout']}";
+	$fileDir = get_template_directory() . "/{$filePath}.php";
+	if ( !file_exists($fileDir) ) {
+		createLayoutComponent($layout['acf_fc_layout']);
+	} 
+}
 
 
 

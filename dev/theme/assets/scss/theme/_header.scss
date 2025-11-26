@@ -1,0 +1,66 @@
+
+
+header {
+	@apply lg:h-[6rem] h-[4rem] bg-dark text-white sticky top-0 flex items-center z-[50];
+
+	.main-menu {
+		@apply 
+			bg-dark
+			flex 
+			lg:gap-[1.75rem] gap-[0.5rem] 
+			lg:flex-row flex-col
+			lg:static absolute 
+			top-[4rem] left-0
+			lg:w-fit w-[0%]
+			lg:visible invisible
+			justify-center
+			items-center
+			z-[90]
+			lg:duration-[0s] duration-[.875s]
+			lg:overflow-visible overflow-hidden
+			ease-[cubic-bezier(0.65,0.05,0.36,1)]
+			lg:h-fit h-[calc(100svh-4rem)];
+
+		li {
+			@apply uppercase font-bold lg:opacity-100 opacity-0 transition-opacity duration-[.2s]
+			lg:text-[1rem] md:text-[2.5rem] sm:text-[1.875rem] text-[1.75rem];
+
+			&.btn-item {
+				@apply lg:border-[3px] border-[2px] border-white 
+				 lg:text-[1rem] block
+				md:text-[1.125rem] sm:text-[1.125rem] text-[1.125rem] 
+				lg:mt-0 mt-4 lg:mb-0 mb-[6rem];
+				a {
+					@apply block xl:px-5 xl:py-2 px-4 py-2;
+				}
+				&:hover {
+					@apply bg-white text-dark;
+				}
+			}
+
+			&:not(.current-menu-item):not(.btn-item) {
+				@apply lg:text-white text-white/50;
+			}
+
+
+			&.current-menu-item:not(.btn-item) {
+				@apply lg:underline underline-offset-[8px] decoration-[3px] lg:text-white text-white/100 ; 
+			}
+
+			&:hover:not(.current-menu-item):not(.btn-item) {
+				@apply opacity-50;
+			}
+		}
+	}
+
+	&.open-menu {
+		.main-menu {
+			@apply visible w-full;
+			li {
+				@apply opacity-100 delay-[.75s] duration-[.2s];
+			}
+		}
+	}
+
+}
+

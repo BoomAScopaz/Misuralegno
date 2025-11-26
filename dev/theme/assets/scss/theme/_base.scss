@@ -8,11 +8,17 @@ html {
 
 body {
 	font-size: 1rem;
-	font-family: "Sora" , sans-serif;
+	font-family: "Manrope" , sans-serif;
+	@apply bg-light text-dark;
+}
+
+* {
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 }
 
 main {
-	@apply my-[3rem]
+
 }
 
 .container {
@@ -26,7 +32,8 @@ p {
 
 h1,h2,h3,h4,h5,h6,
 .h1,.h2,.h3,.h4,.h5,.h6 {
-	font-family: "Sora" , sans-serif;
+	font-family: "Manrope" , sans-serif;
+	font-weight: bold;
 }
 
 h1 {

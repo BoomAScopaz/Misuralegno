@@ -1,20 +1,14 @@
 
-const themeName = 'starter' // -->  insert theme name
+const themeName = 'misuralegno' // -->  insert theme name
 const outputPath = '../wp-content/themes/' + themeName
 const mix = require('laravel-mix');
 
-
-require('mix-tailwindcss');
 require('laravel-mix-clean');
-
 
 mix.setPublicPath(outputPath)
 
-/** js and css **/
 .js('theme/assets/js/main.js', 'assets/js')
 .sass('theme/assets/scss/main.scss', 'assets/css')
-.tailwind()
-
 
 /** copy files **/
 .copy('./theme/inc/*.php', outputPath + '/inc' )
@@ -27,6 +21,10 @@ mix.setPublicPath(outputPath)
 .copy('./theme/assets/img',  outputPath + '/assets/img')
 .copy('./theme/assets/fonts',  outputPath + '/assets/fonts')
 
+/** options **/
+.options({
+    processCssUrls: false,
+})
 
 /** clean old files **/
 .clean({
@@ -35,22 +33,25 @@ mix.setPublicPath(outputPath)
 })
 
 /** browserSync **/
-// mix.browserSync({
-//   proxy: 'http://tuo-sito-locale.test',
-//   files: [
-//     'theme/**/*.php',
-//     'theme/assets/js/**/*.js',
-//     'theme/assets/scss/**/*.scss'
-//   ]
-// })
-
-
-/** options **/
-.options({
-    postCss: [
-        require("autoprefixer"), 
-        require("cssnano")
-    ],
-    processCssUrls: true,
+mix.browserSync({
+  proxy: {
+    target: 'https://misuralegno.lndo.site',
+    proxyOptions: {
+      secure: false // Ignora verifica certificati SSL
+    }
+  },
+  https: true,
+  host: 'localhost',
+  port: 3000,
+  open: true,
+  notify: false,
+  files: [
+     'theme/**/*.php',
+     'theme/assets/js/**/*.js',
+     'theme/assets/scss/**/*.scss'
+  ]
 })
+
+
+
 

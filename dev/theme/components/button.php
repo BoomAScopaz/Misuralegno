@@ -5,6 +5,6 @@
 		href="<?= $args['url'] ?>" 
 	>
 		<?= ($args['icon'] ?? 0) ? svg($args['icon']) : null ?>
-		<?= $args['title'] ?? 'bottone' ?>
+		<span><?= $args['title'] ?? 'bottone' ?></span>
 	</a>
 <?php endif ?>

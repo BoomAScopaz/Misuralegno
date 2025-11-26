@@ -1,0 +1,65 @@
+.btn {
+	@apply flex border-[3px] px-[1.75rem] py-[0.6rem] w-fit text-[1rem] uppercase font-bold relative duration-[.25s];
+	span {
+		@apply relative z-[2];
+	}
+	&:before {
+		@apply content-[''] absolute bottom-0 left-0 w-full bg-dark h-0 z-[0] duration-200 ease-[cubic-bezier(0.65,0.05,0.36,1)]
+	}
+	&:hover {
+		@apply text-white border-dark;
+		&:before {
+			@apply h-full;
+		}
+	}
+	&.light-btn {
+		@apply text-white border-white ;
+		&:before {
+				@apply bg-white ;
+			}
+		&:hover {
+			@apply text-dark;
+			&:before {
+				@apply bg-white ;
+			}
+		}
+	}
+}
+
+.bg-dark {
+	@apply text-white;
+}
+
+
+.txt-1 {
+	@apply lg:text-[3.33rem] text-[2rem] font-bold leading-[1.2] lg:w-[55%] mx-auto text-center;
+}
+
+.txt-2 {
+	@apply lg:text-[2.5rem] text-[1rem] lg:font-bold leading-[1.33] lg:px-[6%] md:text-center;
+}
+p.txt-2 {
+	@apply lg:my-[3rem];
+}
+
+
+.t-outline {
+	--color: #fff;
+	--stroke: 2px;
+	text-shadow:
+	    var(--stroke) 0 var(--color),
+	    calc(var(--stroke) * -1) 0 var(--color),
+	    0 var(--stroke) var(--color),
+	    0 calc(var(--stroke) * -1) var(--color),
+	    var(--stroke) var(--stroke) var(--color),
+	    calc(var(--stroke) * -1) calc(var(--stroke) * -1) var(--color),
+	    var(--stroke) calc(var(--stroke) * -1) var(--color),
+	    calc(var(--stroke) * -1) var(--stroke) var(--color);
+}
+
+@media (max-width: 768px){
+	.t-outline {
+		--stroke: 0px;
+		color: #fff;
+	}
+}

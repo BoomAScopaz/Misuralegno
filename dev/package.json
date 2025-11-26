@@ -11,12 +11,14 @@
     "build": "mix --production"
   },
   "devDependencies": {
+    "browser-sync": "^3.0.4",
+    "browser-sync-webpack-plugin": "^2.4.0",
     "clean-webpack-plugin": "^4.0.0",
     "fast-glob": "^3.3.2",
     "laravel-mix": "^6.0.49",
     "laravel-mix-clean": "^0.1.0",
     "laravel-mix-copy-watched": "^3.0.0",
-    "mix-tailwindcss": "^1.3.0",
+    "postcss-nesting": "^13.0.2",
     "resolve-url-loader": "^5.0.0",
     "sass": "^1.69.5",
     "sass-loader": "^12.6.0",
@@ -25,6 +27,7 @@
   "dependencies": {
     "@alpinejs/persist": "^3.14.8",
     "alpinejs": "^3.14.8",
-    "gsap": "^3.12.5"
+    "gsap": "^3.12.5",
+    "swiper": "^12.0.3"
   }
 }

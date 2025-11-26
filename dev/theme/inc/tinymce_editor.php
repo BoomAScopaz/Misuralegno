@@ -1,6 +1,5 @@
 <?php
-function tinymce_settings($init_array)
-{
+function tinymce_settings($init_array) {
   // Define the style_formats array
   $style_formats = array(
 
@@ -9,38 +8,19 @@ function tinymce_settings($init_array)
       'items' => array(
         // Each array child is a format with it's own settings
         array(
-          'title' => 'title',
+          'title' => 'titolo 1',
           'selector' => 'p,h1,h2,h3,h4,h5,h6,ul,ol,li',
-          'classes' => 'class'
+          'classes' => 'txt-1'
         ),
-      )
-    ),
-
-    array(
-      'title' => 'Colore testo',
-      'items' => array(
-        // Each array child is a format with it's own settings
         array(
-          'title' => 'primary',
-          'selector' => 'p,h1,h2,h3,h4,h5,h6',
-          'classes' => '!text-primary'
+          'title' => 'titolo 2',
+          'selector' => 'p,h1,h2,h3,h4,h5,h6,ul,ol,li',
+          'classes' => 'txt-2'
         ),
       )
     ),
-
-    array(
-      'title' => 'Font',
-      'items' => array(
-        // Each array child is a format with it's own settings
-        array(
-          'title' => 'fontname',
-          'selector' => 'p,h1,h2,h3,h4,h5,h6',
-          'classes' => '!font-fontname'
-        ),
-      )
-    ),
-
   );
+
   // Insert the array, JSON ENCODED, into 'style_formats'
   $init_array['style_formats_merge'] = true;
   $init_array['style_formats'] = json_encode($style_formats);

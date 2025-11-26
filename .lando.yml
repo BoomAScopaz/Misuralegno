@@ -1,20 +1,20 @@
-name: starter
+name: misuralegno
 recipe: wordpress
 proxy:
-  pma:
-    - pma.starter.lndo.site
-  # mailhog:
-    # - mailhog.starter.lndo.site
+  # pma:
+    # - pma.starter.lndo.site
+  mailhog:
+    - mailhog.misuralegno.lndo.site
 config:
   webroot: .
   via: apache
   php: "8.2"
   xdebug: true
 services:
-  # mailhog:
-    # type: mailhog
-  pma:
-    type: phpmyadmin
-    host:
-      - database
+  mailhog:
+    type: mailhog
+  # pma:
+  #   type: phpmyadmin
+  #   host:
+  #     - database
       

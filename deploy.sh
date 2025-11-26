@@ -7,8 +7,8 @@
 HOST='ftp.yourhost'
 USER='user'
 PASS='password'
-LOCAL_DIR='./wp-content/themes/yourThemeName'
-REMOTE_DIR='/htdocs/wp-content/themes/yourThemeName'
+LOCAL_DIR='./wp-content/themes/misuralegno'
+REMOTE_DIR='/htdocs/misuralegno/wp-content/themes/misuralegno'
 
 # Comando lftp
 lftp -e "
