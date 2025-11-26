@@ -4,8 +4,6 @@
 !.lando.yml
 !.gitignore
 !README.md
-!deploy.sh
-
 
 dev/node_modules
 node_modules
