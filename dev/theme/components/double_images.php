@@ -39,7 +39,7 @@
 			</div>
 			<template x-if="isOpen && videoUrl">
 				<video 
-					class="object-cover aspect-[16/9] w-full md:max-w-[1000px]" 
+					class="  w-auto md:max-w-[1000px] md:max-h-[80vh]" 
 					autoplay loop muted controls playsinline 
 					:src="videoUrl" 
 					type="video/mp4">
