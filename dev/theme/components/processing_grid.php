@@ -8,11 +8,11 @@
 		:style="{ height: (height / 2) + 'px'}" >
 	</div>
 			
-	<div class="container ">
+	<div class="container appear-up">
 		<?php if (!empty($args['grid'])): ?>
 			<div class="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 xl:gap-12 gap-10 relative z-10">
 				<?php foreach ($args['grid'] as $key => $value): ?>
-					<div class="">
+					<div class="anim-el">
 						<div <?= !$key ? 'x-ref="box"' : ''?>>
 							<?= attach($value['img'],'aspect-[1] object-cover w-full') ?>
 						</div>

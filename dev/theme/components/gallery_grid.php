@@ -9,9 +9,9 @@
 	<div class="container">
 
 		<?php if (!empty($args['gallery'])): ?>
-			<div class="grid lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 xl:gap-6 sm:gap-4 gap-5">
+			<div class="grid lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 xl:gap-6 sm:gap-4 gap-5 appear-up">
 				<template x-for="(el, ind) in images.slice(0, pag)" :key="ind">
-					<img :src="el.src" alt="">
+					<img :src="el.src" alt="" class="anim-el">
 				</template>
 			</div>
 		<?php endif ?>

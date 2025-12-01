@@ -1,15 +1,25 @@
 import Alpine from 'alpinejs'
-import boxresize from './_box-resize'
-import gridgal from './_gridgal'
+
+// Modules to import
 import Slider from './_slider'
-
-window.boxresize = boxresize
-window.gridgal = gridgal
-
-Alpine.start()
+import Animations from './_animations'
 
 // collect modules
-const init = [ Slider ]
+const init = [ Slider, Animations ]
+
+
+// alpine stores
+import boxresize from './_box-resize'
+import gridgal from './_gridgal'
+import videopopup from './_video-popup'
+
+
+// alpine
+window.boxresize = boxresize
+window.gridgal = gridgal
+window.videopopup = videopopup
+Alpine.start()
+
 
 // init modules
 document.addEventListener('DOMContentLoaded', () => {

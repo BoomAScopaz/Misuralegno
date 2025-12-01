@@ -1,7 +1,7 @@
 <section class="contact_banner <?= $args['bg_color'] ?> pt-[6rem]">
 
-	<div class="relative">
-		<div class="w-full max-w-[1100px] min-h-[500px] bg-dark text-center relative z-10 flex items-center justify-center overflow-hidden mx-auto">
+	<div class="relative appear-up">
+		<div class="anim-el w-full max-w-[1100px] min-h-[500px] bg-dark text-center relative z-10 flex items-center justify-center overflow-hidden mx-auto">
 			<?= svg('outline-logo','absolute top-0 left-auto md:translate-y-[20%] md:opacity-50 opacity-30') ?>	
 
 			<div class="md:max-w-[60%] px-4 text-center relative z-10">

@@ -1,0 +1,9 @@
+.mask {
+	/*clip-path: polygon(0 0%, 100% 0%, 100% 0%, 0% 0%);*/
+
+	clip-path: polygon(0% 0%, 0% 0%, 0% 100%, 0% 100%);
+}
+
+.anim-el {
+	@apply translate-y-[10%] opacity-0 ;
+}
